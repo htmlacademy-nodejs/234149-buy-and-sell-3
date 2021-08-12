@@ -1,7 +1,7 @@
 # Учебный проект «Куплю. Продам» [![Build status][travis-image]][travis-url]
 
 * Студент: [Екатерина Крутакова](https://up.htmlacademy.ru/nodejs/3/user/234149).
-* Наставник: `Неизвестно`.
+* Наставник: [Роман Шестернин](https://htmlacademy.ru/profile/id1831979).
 
 ---
 
