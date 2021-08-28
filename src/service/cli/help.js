@@ -5,6 +5,6 @@ const {HELP_MESSAGE} = require(`../../constants`);
 module.exports = {
   name: `--help`,
   run() {
-    console.log(HELP_MESSAGE);
+    console.info(HELP_MESSAGE);
   }
 };
