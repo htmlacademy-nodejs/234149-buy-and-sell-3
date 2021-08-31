@@ -1,6 +1,5 @@
 'use strict';
 
-const DEFAULT_COUNT = 1;
 const FILE_NAME = `mocks.json`;
 const DEFAULT_COMMAND = `--help`;
 const USER_ARGV_INDEX = 2;
@@ -61,6 +60,11 @@ const PictureRestrict = {
   MAX: 16,
 };
 
+const OfferCount = {
+  max: 1000,
+  min: 1
+};
+
 const ExitCode = {
   success: 0,
   error: 1
@@ -69,12 +73,12 @@ const ExitCode = {
 module.exports = {
   SumRestrict,
   PictureRestrict,
+  OfferCount,
   OfferType,
   ExitCode,
   CATEGORIES,
   SENTENCES,
   TITLES,
-  DEFAULT_COUNT,
   FILE_NAME,
   DEFAULT_COMMAND,
   USER_ARGV_INDEX,

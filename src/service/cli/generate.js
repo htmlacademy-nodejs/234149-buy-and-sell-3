@@ -15,7 +15,7 @@ const {
   OfferType,
   PictureRestrict,
   SumRestrict,
-  DEFAULT_COUNT,
+  OfferCount,
   FILE_NAME,
   ExitCode
 } = require(`../../constants`);
@@ -40,7 +40,13 @@ module.exports = {
   name: `--generate`,
   run(args) {
     const [count] = args;
-    const countOffer = Number.parseInt(count, 10) || DEFAULT_COUNT;
+
+    if (!isNaN(count) && Number.parseInt(count, 10) > OfferCount.max) {
+      console.error(`Не больше 1000 объявлений`);
+      process.exit(ExitCode.error);
+    }
+
+    const countOffer = Number.parseInt(count, 10) || OfferCount.min;
     const content = JSON.stringify(generateOffers(countOffer));
     fs.writeFile(FILE_NAME, content, (err) => {
       if (err) {
